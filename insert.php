@@ -5,8 +5,14 @@ $password="";
 $dbname="connect_database";
 
 $connect=mysqli_connect($host,$user_name,$password,$dbname);
-if($connect){
-    
+if(isset($_POST['send'])){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+    $dept=$_POST['dept'];
+    $query="INSERT INTO insert_data(name,email,phone,dept)
+    VALUES('$name','$email','$phone','$dept')";
+    mysqli_query($connect,$query);
 }
 else{
     echo"connection Failed";
@@ -24,13 +30,13 @@ else{
 <body>
     <form method="POST">
         <input type="text" name="name" placeholder="name"><br><br>
-        <input type="text" name="email" placeholder="email"><br><br>
+        <input type="email" name="email" placeholder="email"><br><br>
         <input type="text" name="phone" placeholder="phone"><br><br>
         <select name="dept">
-            <option value="">CSE</option>
-            <option value="">EEE</option>
-            <option value="">BBA</option>
-            <option value="">CIVIL</option><br>
+            <option>CSE</option>
+            <option>EEE</option>
+            <option>BBA</option>
+            <option>CIVIL</option>
 </select>
         <button name="send">save</button>
     </form>
