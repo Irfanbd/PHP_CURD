@@ -24,10 +24,46 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CURD</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+                }
+        .container{
+    display: flex;
+    justify-content: center;
+    background: rgb(210,143,210);
+background: linear-gradient(9deg, rgba(210,143,210,1) 0%, rgba(85,111,237,1) 100%);
+    width: 80%;
+    margin:  0 auto;
+    height: 500px;
+    align-items:center;
+    text-align: center;
+}
+input{
+    border:4px solid green;
+    text-align:center;
+    width:90%;
+    padding: 10px 15px;
+}
+select{
+    border:4px solid green;
+    text-align:center;
+    padding: 10px 15px;
+}
+button{
+    border:4px solid green;
+    text-align:center;
+    padding: 10px 15px;
+    margin-top:10px;
+}
+    </style>
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
+    <div class="container">
     <form method="POST">
         <input type="text" name="name" placeholder="name"><br><br>
         <input type="email" name="email" placeholder="email"><br><br>
@@ -37,8 +73,9 @@ else{
             <option>EEE</option>
             <option>BBA</option>
             <option>CIVIL</option>
-</select>
+</select><br>
         <button name="send">save</button>
     </form>
+    </div>
 </body>
 </html>
