@@ -50,6 +50,7 @@ input{
 select{
     border:4px solid green;
     text-align:center;
+    width:90%;
     padding: 10px 15px;
 }
 button{
@@ -76,6 +77,32 @@ button{
 </select><br>
         <button name="send">save</button>
     </form>
+
+
+
+
+<!--Read Data-->
+
+<table>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Department</th>
+</table>
+    <?php
+$read="SELECT*FROM insert_data";
+$query=mysqli_query($connect,$read);
+while($row= mysqli_fetch_array($query)){?>
+
+<tr>
+    <td><?php echo?></td>
+</tr>
+
+<?php
+    
+}
+    ?>
+
+
     </div>
 </body>
 </html>
